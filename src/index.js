@@ -1,17 +1,63 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { StrictMode, useState } from "react";
+import SearchParams from "./SearchParams";
+import Details from "./Details";
+import ThemeContext from "./ThemeContext";
+import "./style.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+    const theme = useState("darkblue");
+    return (
+        <StrictMode>
+            <ThemeContext.Provider value={theme}>
+            <BrowserRouter>
+                <header>
+                    <Link to="/">Adopt Me!</Link>
+                </header>
+                <Routes>
+                    <Route path="/details/:id" element={<Details />} />
+                    <Route path="/" element={<SearchParams />} />
+                </Routes>
+            </BrowserRouter>
+            </ThemeContext.Provider>
+        </StrictMode>
+    );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+render(<App />, document.getElementById("root"));
+
+
+
+// const App = () => {
+//     return React.createElement("div", {}, [
+//         React.createElement("h1", {}, "Adopt Me!"),
+//         React.createElement(Pet, {
+//             name: "Luna",
+//             animal: "Dog",
+//             breed: "Havanese"
+//         }),
+//         React.createElement(Pet, {
+//             name: "Pepper",
+//             animal: "Bird",
+//             breed: "Cockatiel"
+//         }),
+//         React.createElement(Pet, {
+//             name: "Doink",
+//             animal: "Cat",
+//             breed: "Mix"
+//         }),
+//     ]);
+// };
+
+
+// const App = () => {
+//     return (
+//         <div>
+//             <h1>Adopt Me!</h1>
+//             <Pet name="Luna" animal="Dog" breed="Havanese" />
+//             <Pet name="Pepper" animal="Bird" breed="Cockatiel" />
+//             <Pet name="Doink" animal="Cat" breed="Mix" />
+//         </div>
+//     );
+// };
