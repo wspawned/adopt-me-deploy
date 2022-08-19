@@ -1,7 +1,6 @@
 # Adopt Me - Pet Adoption App
 
-Deployed link of project; <br>
-https://main.d2zamf45w2xsj.amplifyapp.com/<br>
+Deployed project; <br> (link)[https://main.d2zamf45w2xsj.amplifyapp.com/]
 <br>
 This project is created during FrontendMasters' course given by Brian Holt.
 ```
