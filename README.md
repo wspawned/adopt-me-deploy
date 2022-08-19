@@ -1,6 +1,10 @@
 # Adopt Me - Pet Adoption App
 
 [Deployed project link](https://main.d2zamf45w2xsj.amplifyapp.com/)
+
+![image](https://user-images.githubusercontent.com/80424496/185688185-62870cbc-251b-48fd-b984-17bde0d19050.png)
+
+
 <br>
 This project is created during FrontendMasters' course given by Brian Holt.
 ```
