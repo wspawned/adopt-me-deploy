@@ -6,7 +6,9 @@
 
 
 <br>
+
 This project is created during FrontendMasters' course given by Brian Holt.
+
 ```
 Complete Intro to React, v7 - Brian Holt
 ```
